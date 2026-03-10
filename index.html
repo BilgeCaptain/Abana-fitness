@@ -3,23 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abana Fitness | Kişisel Antrenör</title>
+    <title>Abana Fitness | Muscle Build Edition</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@400;700;900&display=swap');
-        
+        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@400;700;900&display=swap');
         body { font-family: 'Inter', sans-serif; background-color: #020617; }
         .abana-font { font-family: 'Syncopate', sans-serif; }
-        .video-overlay { background: linear-gradient(0deg, rgba(2, 6, 23, 1) 0%, rgba(2, 6, 23, 0) 60%); }
+        .video-overlay { background: linear-gradient(0deg, rgba(2, 6, 23, 1) 0%, rgba(2, 6, 23, 0) 70%); }
         details > summary { list-style: none; }
         details > summary::-webkit-details-marker { display: none; }
         iframe { pointer-events: none; border-radius: 1.5rem; }
-        
-        /* Abana Temalı Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #020617; }
-        ::-webkit-scrollbar-thumb { background: #0ea5e9; border-radius: 10px; }
     </style>
 </head>
 <body class="text-slate-200 selection:bg-sky-500 pb-20 text-left">
@@ -28,172 +22,123 @@
         <div class="max-w-6xl mx-auto flex justify-between items-center">
             <div class="flex flex-col">
                 <h1 class="abana-font text-xl font-bold text-white tracking-tighter">ABANA <span class="text-sky-500">FITNESS</span></h1>
-                <span class="text-[8px] text-sky-300 tracking-[0.3em] uppercase font-bold">Dalgaları Aş, Gücüne Kavuş</span>
+                <span class="text-[8px] text-sky-300 tracking-[0.3em] uppercase font-bold italic">Hipertrofi & Kas İnşası</span>
             </div>
-            <div class="hidden md:flex gap-6 items-center">
-                <span class="text-xs font-bold text-slate-400 uppercase tracking-widest"><i class="fas fa-anchor mr-2 text-sky-500"></i> bilgecaptain Edition</span>
+            <div class="bg-sky-500/10 border border-sky-500/20 px-3 py-1 rounded-full">
+                <span class="text-[10px] text-sky-400 font-bold uppercase tracking-widest">Muscle Build Mode</span>
             </div>
         </div>
     </nav>
 
     <main class="max-w-6xl mx-auto p-6 space-y-10 mt-6">
 
-        <section class="bg-gradient-to-r from-sky-950/40 to-slate-900/40 border border-sky-500/20 rounded-[2.5rem] p-8">
-            <div class="flex items-center gap-5 mb-8 text-left">
-                <div class="h-14 w-14 bg-sky-500 rounded-2xl flex items-center justify-center text-white shadow-2xl shadow-sky-500/40">
-                    <i class="fas fa-water text-2xl"></i>
-                </div>
-                <div>
-                    <h2 class="text-2xl font-black text-white uppercase italic">00. Kıyıya Hazırlık</h2>
-                    <p class="text-sm text-sky-400 font-bold uppercase tracking-widest">Antrenman Öncesi Motoru Isıt</p>
-                </div>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-[#0f172a] p-6 rounded-3xl border border-slate-800 hover:border-sky-500/50 transition-all">
-                    <h4 class="text-sky-400 font-black text-xs uppercase mb-4 flex items-center gap-2">
-                        <i class="fas fa-sync-alt animate-spin-slow"></i> Eklem Rotasyonu
-                    </h4>
-                    <p class="text-[11px] text-slate-400 leading-relaxed">Omuz, bilek ve boyun bölgelerini 10'ar kez dairesel hareketlerle çevirerek eklem sıvısını aktive et.</p>
-                </div>
-                <div class="bg-[#0f172a] p-6 rounded-3xl border border-slate-800 hover:border-sky-500/50 transition-all">
-                    <h4 class="text-sky-400 font-black text-xs uppercase mb-4 flex items-center gap-2">
-                        <i class="fas fa-expand"></i> Dinamik Esneme
-                    </h4>
-                    <p class="text-[11px] text-slate-400 leading-relaxed">Kolları yanlara aç-kapa (15x), sırtı Y ve W şeklinde sıkıştır (10x). Kas boyunu harekete hazırla.</p>
-                </div>
-                <div class="bg-[#0f172a] p-6 rounded-3xl border border-slate-800 hover:border-sky-500/50 transition-all">
-                    <h4 class="text-sky-400 font-black text-xs uppercase mb-4 flex items-center gap-2">
-                        <i class="fas fa-heartbeat"></i> Nabız Yükselt
-                    </h4>
-                    <p class="text-[11px] text-slate-400 leading-relaxed">30 saniye boyunca olduğun yerde hafif tempo koş veya zıpla. Vücut ısın artık antrenman başlasın!</p>
-                </div>
-            </div>
-        </section>
-
         <details open class="group bg-[#0f172a]/50 border border-slate-800 rounded-[3rem] overflow-hidden shadow-2xl transition-all hover:border-sky-500/30">
             <summary class="flex items-center justify-between cursor-pointer p-8 hover:bg-sky-500/5 transition-all">
-                <div class="flex items-center gap-6 text-left">
+                <div class="flex items-center gap-6">
                     <div class="h-16 w-16 bg-gradient-to-br from-sky-500 to-blue-700 rounded-3xl flex items-center justify-center text-white font-black italic shadow-xl text-2xl">01</div>
-                    <div>
-                        <h2 class="text-2xl font-black text-white uppercase tracking-tighter">Göğüs & Arka Kol</h2>
-                        <p class="text-xs text-sky-400 mt-1 font-bold tracking-widest uppercase">Güç & İtiş Hattı</p>
-                    </div>
+                    <h2 class="text-2xl font-black text-white uppercase tracking-tighter">Göğüs & Arka Kol</h2>
                 </div>
-                <div class="flex items-center gap-4">
-                    <span class="hidden md:block text-[10px] font-bold text-slate-500 uppercase tracking-widest italic">Süper Setler Aktif</span>
-                    <i class="fas fa-chevron-down transition-transform group-open:rotate-180 text-sky-500 text-xl"></i>
-                </div>
+                <i class="fas fa-chevron-down transition-transform group-open:rotate-180 text-sky-500 text-xl"></i>
             </summary>
             
-            <div class="p-8 pt-0 grid grid-cols-1 md:grid-cols-2 gap-10 mt-6">
-                <div class="flex flex-col text-left">
-                    <div class="relative aspect-video mb-6">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/TvPviMnKg6s?autoplay=1&mute=1&loop=1&playlist=TvPviMnKg6s" frameborder="0"></iframe>
-                        <div class="absolute inset-0 video-overlay pointer-events-none"></div>
+            <div class="p-8 pt-0 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-slate-900/50 p-4 rounded-3xl border border-slate-800">
+                    <div class="relative aspect-video mb-4">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/TvPviMnKg6s?autoplay=1&mute=1&loop=1&playlist=TvPviMnKg6s"></iframe>
                     </div>
-                    <div class="px-2">
-                        <h3 class="text-xl font-black text-white mb-2 uppercase italic tracking-tight">Floor Press + Şınav</h3>
-                        <div class="flex items-center gap-3 mb-4">
-                            <span class="bg-sky-500/10 text-sky-400 font-bold px-3 py-1 rounded-full text-[10px] border border-sky-500/20 uppercase tracking-widest">4 Set x Tükeniş</span>
-                        </div>
-                        <p class="text-xs text-slate-400 italic mb-6 leading-relaxed">Dambılları yukarı bas (15x), dambılları hemen bırakıp şınava geç. Göğüs kaslarını sök!</p>
-                        <button onclick="startTimer(this, 45)" class="w-full bg-slate-900 hover:bg-sky-600 text-white font-black py-4 rounded-2xl transition-all shadow-lg tracking-widest uppercase text-xs italic">45s Mola Ver</button>
-                    </div>
+                    <h4 class="font-bold text-white uppercase text-sm mb-1">1. Floor Press</h4>
+                    <span class="text-sky-400 text-[10px] font-bold">4 SET x 12-15 (Yavaş İndir)</span>
+                    <button onclick="startTimer(this, 45)" class="w-full mt-4 bg-slate-950 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:bg-sky-600 transition-all">Mola</button>
                 </div>
-
-                <div class="flex flex-col text-left">
-                    <div class="relative aspect-video mb-6">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/AYqg9S5FrUU?autoplay=1&mute=1&loop=1&playlist=AYqg9S5FrUU" frameborder="0"></iframe>
-                        <div class="absolute inset-0 video-overlay pointer-events-none"></div>
+                <div class="bg-slate-900/50 p-4 rounded-3xl border border-slate-800">
+                    <div class="relative aspect-video mb-4">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/eozdVDA78K0?autoplay=1&mute=1&loop=1&playlist=eozdVDA78K0"></iframe>
                     </div>
-                    <div class="px-2">
-                        <h3 class="text-xl font-black text-white mb-2 uppercase italic tracking-tight">Overhead Triceps</h3>
-                        <div class="flex items-center gap-3 mb-4">
-                            <span class="bg-sky-500/10 text-sky-400 font-bold px-3 py-1 rounded-full text-[10px] border border-sky-500/20 uppercase tracking-widest">3 Set x 20 Tekrar</span>
-                        </div>
-                        <p class="text-xs text-slate-400 italic mb-6 leading-relaxed">Dirsekleri videodaki gibi kulak hizasında tut. Arka kolu ateşe ver.</p>
-                        <button onclick="startTimer(this, 30)" class="w-full bg-slate-900 hover:bg-sky-600 text-white font-black py-4 rounded-2xl transition-all shadow-lg tracking-widest uppercase text-xs italic">30s Mola Ver</button>
+                    <h4 class="font-bold text-white uppercase text-sm mb-1">2. DB Chest Fly</h4>
+                    <span class="text-sky-400 text-[10px] font-bold">3 SET x 15 (İyice Esnet)</span>
+                    <button onclick="startTimer(this, 45)" class="w-full mt-4 bg-slate-950 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:bg-sky-600 transition-all">Mola</button>
+                </div>
+                <div class="bg-slate-900/50 p-4 rounded-3xl border border-slate-800">
+                    <div class="relative aspect-video mb-4">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/AYqg9S5FrUU?autoplay=1&mute=1&loop=1&playlist=AYqg9S5FrUU"></iframe>
                     </div>
+                    <h4 class="font-bold text-white uppercase text-sm mb-1">3. Overhead Triceps</h4>
+                    <span class="text-sky-400 text-[10px] font-bold">4 SET x 15 (Dirsekler Sabit)</span>
+                    <button onclick="startTimer(this, 30)" class="w-full mt-4 bg-slate-950 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:bg-sky-600 transition-all">Mola</button>
                 </div>
             </div>
         </details>
 
-        <details class="group bg-[#0f172a]/50 border border-slate-800 rounded-[3rem] overflow-hidden shadow-2xl transition-all hover:border-emerald-500/30 text-left">
+        <details class="group bg-[#0f172a]/50 border border-slate-800 rounded-[3rem] overflow-hidden shadow-2xl transition-all hover:border-emerald-500/30">
             <summary class="flex items-center justify-between cursor-pointer p-8 hover:bg-emerald-500/5 transition-all">
                 <div class="flex items-center gap-6">
                     <div class="h-16 w-16 bg-gradient-to-br from-emerald-500 to-green-700 rounded-3xl flex items-center justify-center text-white font-black italic shadow-xl text-2xl">02</div>
-                    <div>
-                        <h2 class="text-2xl font-black text-white uppercase tracking-tighter text-left">Sırt & Ön Kol</h2>
-                        <p class="text-xs text-emerald-400 mt-1 font-bold tracking-widest uppercase text-left">Çekiş & Form</p>
-                    </div>
+                    <h2 class="text-2xl font-black text-white uppercase tracking-tighter">Sırt & Ön Kol</h2>
                 </div>
                 <i class="fas fa-chevron-down transition-transform group-open:rotate-180 text-emerald-500 text-xl"></i>
             </summary>
             
-            <div class="p-8 pt-0 grid grid-cols-1 md:grid-cols-2 gap-10 mt-6">
-                <div class="flex flex-col text-left">
-                    <div class="relative aspect-video mb-6">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/6gvmcqr226U?autoplay=1&mute=1&loop=1&playlist=6gvmcqr226U" frameborder="0"></iframe>
-                        <div class="absolute inset-0 video-overlay pointer-events-none"></div>
+            <div class="p-8 pt-0 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-slate-900/50 p-4 rounded-3xl border border-slate-800">
+                    <div class="relative aspect-video mb-4">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/6gvmcqr226U?autoplay=1&mute=1&loop=1&playlist=6gvmcqr226U"></iframe>
                     </div>
-                    <div class="px-2">
-                        <h3 class="text-xl font-black text-white mb-2 uppercase italic tracking-tight">Bent Over Row</h3>
-                        <span class="bg-emerald-500/10 text-emerald-400 font-bold px-3 py-1 rounded-full text-[10px] border border-emerald-500/20 uppercase tracking-widest mb-4 inline-block italic">4 Set x 15 Tekrar</span>
-                        <button onclick="startTimer(this, 45)" class="w-full mt-6 bg-slate-900 hover:bg-emerald-600 text-white font-black py-4 rounded-2xl transition-all shadow-lg tracking-widest uppercase text-xs italic text-center">45s Mola Ver</button>
-                    </div>
+                    <h4 class="font-bold text-white uppercase text-sm mb-1">1. Bent Over Row</h4>
+                    <span class="text-emerald-400 text-[10px] font-bold">4 SET x 12 (Sırtı Sıkıştır)</span>
+                    <button onclick="startTimer(this, 45)" class="w-full mt-4 bg-slate-950 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:bg-emerald-600 transition-all">Mola</button>
                 </div>
-
-                <div class="flex flex-col text-left">
-                    <div class="relative aspect-video mb-6">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/oLyP6sORFOc?autoplay=1&mute=1&loop=1&playlist=oLyP6sORFOc" frameborder="0"></iframe>
-                        <div class="absolute inset-0 video-overlay pointer-events-none"></div>
+                <div class="bg-slate-950 p-4 rounded-3xl border border-slate-800">
+                    <div class="relative aspect-video mb-4">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/6yMdhi2DVao?autoplay=1&mute=1&loop=1&playlist=6yMdhi2DVao"></iframe>
                     </div>
-                    <div class="px-2">
-                        <h3 class="text-xl font-black text-white mb-2 uppercase italic tracking-tight">Double Biceps S.Set</h3>
-                        <span class="bg-emerald-500/10 text-emerald-400 font-bold px-3 py-1 rounded-full text-[10px] border border-emerald-500/20 uppercase tracking-widest mb-4 inline-block italic">4 Set x 15+10 Tekrar</span>
-                        <p class="text-[10px] text-slate-500 italic mb-4">*Önce normal curl, dinlenmeden hemen hammer curl yap.</p>
-                        <button onclick="startTimer(this, 30)" class="w-full bg-slate-900 hover:bg-emerald-600 text-white font-black py-4 rounded-2xl transition-all shadow-lg tracking-widest uppercase text-xs italic">30s Mola Ver</button>
+                    <h4 class="font-bold text-white uppercase text-sm mb-1">2. Reverse Fly</h4>
+                    <span class="text-emerald-400 text-[10px] font-bold">3 SET x 15 (Hafif-Sert)</span>
+                    <button onclick="startTimer(this, 45)" class="w-full mt-4 bg-slate-950 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:bg-emerald-600 transition-all">Mola</button>
+                </div>
+                <div class="bg-slate-900/50 p-4 rounded-3xl border border-slate-800">
+                    <div class="relative aspect-video mb-4">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/oLyP6sORFOc?autoplay=1&mute=1&loop=1&playlist=oLyP6sORFOc"></iframe>
                     </div>
+                    <h4 class="font-bold text-white uppercase text-sm mb-1">3. Combo Curls</h4>
+                    <span class="text-emerald-400 text-[10px] font-bold">4 SET x 12 (Yavaş İn)</span>
+                    <button onclick="startTimer(this, 30)" class="w-full mt-4 bg-slate-950 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:bg-emerald-600 transition-all">Mola</button>
                 </div>
             </div>
         </details>
 
-        <details class="group bg-[#0f172a]/50 border border-slate-800 rounded-[3rem] overflow-hidden shadow-2xl transition-all hover:border-amber-500/30 text-left">
+        <details class="group bg-[#0f172a]/50 border border-slate-800 rounded-[3rem] overflow-hidden shadow-2xl transition-all hover:border-amber-500/30">
             <summary class="flex items-center justify-between cursor-pointer p-8 hover:bg-amber-500/5 transition-all">
                 <div class="flex items-center gap-6">
                     <div class="h-16 w-16 bg-gradient-to-br from-amber-500 to-orange-700 rounded-3xl flex items-center justify-center text-white font-black italic shadow-xl text-2xl">03</div>
-                    <div>
-                        <h2 class="text-2xl font-black text-white uppercase tracking-tighter text-left">Omuz & Genişlik</h2>
-                        <p class="text-xs text-amber-400 mt-1 font-bold tracking-widest uppercase text-left">V-Taper Hedefi</p>
-                    </div>
+                    <h2 class="text-2xl font-black text-white uppercase tracking-tighter">Omuz Gelişimi</h2>
                 </div>
                 <i class="fas fa-chevron-down transition-transform group-open:rotate-180 text-amber-500 text-xl"></i>
             </summary>
             
-            <div class="p-8 pt-0 grid grid-cols-1 md:grid-cols-2 gap-10 mt-6">
-                <div class="flex flex-col text-left">
-                    <div class="relative aspect-video mb-6">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/k6tzKisR3NY?autoplay=1&mute=1&loop=1&playlist=k6tzKisR3NY" frameborder="0"></iframe>
-                        <div class="absolute inset-0 video-overlay pointer-events-none"></div>
+            <div class="p-8 pt-0 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-slate-900/50 p-4 rounded-3xl border border-slate-800">
+                    <div class="relative aspect-video mb-4">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/k6tzKisR3NY?autoplay=1&mute=1&loop=1&playlist=k6tzKisR3NY"></iframe>
                     </div>
-                    <div class="px-2">
-                        <h3 class="text-xl font-black text-white mb-2 uppercase italic tracking-tight">Shoulder Press</h3>
-                        <span class="bg-amber-500/10 text-amber-400 font-bold px-3 py-1 rounded-full text-[10px] border border-amber-500/20 uppercase tracking-widest mb-4 inline-block italic">4 Set x 15 Tekrar</span>
-                        <button onclick="startTimer(this, 45)" class="w-full mt-6 bg-slate-900 hover:bg-amber-600 text-white font-black py-4 rounded-2xl transition-all shadow-lg tracking-widest uppercase text-xs italic">45s Mola Ver</button>
-                    </div>
+                    <h4 class="font-bold text-white uppercase text-sm mb-1">1. Shoulder Press</h4>
+                    <span class="text-amber-400 text-[10px] font-bold">4 SET x 12 (Dik Otur)</span>
+                    <button onclick="startTimer(this, 45)" class="w-full mt-4 bg-slate-950 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:bg-amber-600 transition-all">Mola</button>
                 </div>
-
-                <div class="flex flex-col text-left">
-                    <div class="relative aspect-video mb-6">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/Kl3LEzQ5Zqs?autoplay=1&mute=1&loop=1&playlist=Kl3LEzQ5Zqs" frameborder="0"></iframe>
-                        <div class="absolute inset-0 video-overlay pointer-events-none"></div>
+                <div class="bg-slate-900/50 p-4 rounded-3xl border border-slate-800">
+                    <div class="relative aspect-video mb-4">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/Kl3LEzQ5Zqs?autoplay=1&mute=1&loop=1&playlist=Kl3LEzQ5Zqs"></iframe>
                     </div>
-                    <div class="px-2">
-                        <h3 class="text-xl font-black text-white mb-2 uppercase italic tracking-tight text-left">Lateral Raise</h3>
-                        <span class="bg-amber-500/10 text-amber-400 font-bold px-3 py-1 rounded-full text-[10px] border border-amber-500/20 uppercase tracking-widest mb-4 inline-block italic">5 Set x 20 Tekrar</span>
-                        <button onclick="startTimer(this, 20)" class="w-full mt-6 bg-slate-900 hover:bg-amber-600 text-white font-black py-4 rounded-2xl transition-all shadow-lg tracking-widest uppercase text-xs italic">20s Mola (Hızlı!)</button>
+                    <h4 class="font-bold text-white uppercase text-sm mb-1">2. Lateral Raise</h4>
+                    <span class="text-amber-400 text-[10px] font-bold">4 SET x 15-20 (Yana Aç)</span>
+                    <button onclick="startTimer(this, 30)" class="w-full mt-4 bg-slate-950 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:bg-amber-600 transition-all">Mola</button>
+                </div>
+                <div class="bg-slate-950 p-4 rounded-3xl border border-slate-800">
+                    <div class="relative aspect-video mb-4">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/pS8SLe_jI0I?autoplay=1&mute=1&loop=1&playlist=pS8SLe_jI0I"></iframe>
                     </div>
+                    <h4 class="font-bold text-white uppercase text-sm mb-1">3. Front Raise</h4>
+                    <span class="text-amber-400 text-[10px] font-bold">3 SET x 12 (Öne Kaldır)</span>
+                    <button onclick="startTimer(this, 45)" class="w-full mt-4 bg-slate-950 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:bg-amber-600 transition-all">Mola</button>
                 </div>
             </div>
         </details>
@@ -206,25 +151,18 @@
             const originalText = button.innerHTML;
             let timeLeft = seconds;
             button.dataset.running = "true";
-            button.classList.add('bg-sky-600', 'animate-pulse');
+            button.classList.add('bg-sky-600');
 
             const interval = setInterval(() => {
                 timeLeft--;
-                button.innerHTML = `<i class="fas fa-stopwatch fa-spin mr-2"></i> ${timeLeft}s`;
+                button.innerHTML = `Mola: ${timeLeft}s`;
                 if (timeLeft <= 0) {
                     clearInterval(interval);
-                    button.innerHTML = `SETE BAŞLA! 🔱`;
+                    button.innerHTML = `SET ZAMANI!`;
                     button.classList.replace('bg-sky-600', 'bg-emerald-600');
-                    button.classList.remove('animate-pulse');
                     button.dataset.running = "false";
-                    
-                    const audio = new Audio('https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3');
-                    audio.play();
-
-                    setTimeout(() => {
-                        button.innerHTML = originalText;
-                        button.classList.remove('bg-emerald-600');
-                    }, 3000);
+                    new Audio('https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3').play();
+                    setTimeout(() => { button.innerHTML = originalText; button.classList.remove('bg-emerald-600'); }, 3000);
                 }
             }, 1000);
         }
