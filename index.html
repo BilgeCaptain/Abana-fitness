@@ -14,21 +14,18 @@
         .glass-panel { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(56, 189, 248, 0.1); border-radius: 1.5rem; transition: transform 0.2s; }
         .glass-panel:hover { border-color: rgba(56, 189, 248, 0.4); }
         
-        /* Resim Container - Tasarım aynı */
-        .image-container { position: relative; overflow: hidden; border-radius: 1rem; aspect-ratio: 16/9; border: 1px solid rgba(255, 255, 255, 0.05); background-color: #000; }
-        .image-container img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.8) contrast(1.1); }
+        .image-container { position: relative; overflow: hidden; border-radius: 1rem; aspect-ratio: 16/9; border: 1px solid rgba(255, 255, 255, 0.05); background-color: #0f172a; display: flex; align-items: center; justify-content: center; }
+        .image-container img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.7) contrast(1.1); }
         
-        .gradient-text { background: linear-gradient(to right, #38bdf8, #818cf8); -webkit-background-clip: text; color: transparent; }
         .day-title { position: relative; padding-left: 1rem; }
         .day-title::before { content: ''; position: absolute; left: 0; top: 10%; height: 80%; width: 5px; border-radius: 4px; }
         
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #020617; }
         ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #38bdf8; }
     </style>
 </head>
-<body class="pb-24 selection:bg-sky-500 selection:text-white">
+<body class="pb-24">
 
     <nav class="sticky top-0 z-50 bg-[#020617]/90 backdrop-blur-xl border-b border-sky-900/30 p-4 shadow-2xl">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
@@ -36,8 +33,8 @@
                 <h1 class="abana-font text-2xl font-bold tracking-tighter uppercase italic">ABANA<span class="text-sky-500">-FITNESS</span></h1>
                 <p class="text-[9px] tracking-[0.3em] text-sky-400 font-black uppercase mt-1">PPL Split • 5KG Edition</p>
             </div>
-            <div class="text-right flex flex-col items-end">
-                <span class="text-[10px] text-amber-500 font-bold uppercase tracking-widest animate-pulse mt-1"><i class="fas fa-bolt mr-1"></i> Patlayıcı Mod Aktif</span>
+            <div class="text-right">
+                <span class="text-[10px] text-amber-500 font-bold uppercase tracking-widest animate-pulse"><i class="fas fa-bolt mr-1"></i> Patlayıcı Mod</span>
             </div>
         </div>
     </nav>
@@ -45,165 +42,123 @@
     <main class="max-w-7xl mx-auto p-4 md:p-6 space-y-8 mt-4">
 
         <div class="glass-panel p-6 border-l-4 border-l-amber-500 bg-amber-500/5">
-            <h3 class="text-lg font-black text-white uppercase tracking-tight mb-2"><i class="fas fa-layer-group text-amber-500 mr-2"></i>4 Set Sistemi Nasıl Çalışır?</h3>
+            <h3 class="text-lg font-black text-white uppercase tracking-tight mb-2">4 Set Sistemi</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-300">
-                <div class="bg-slate-900/50 p-3 rounded-xl border border-slate-800">
-                    <strong class="text-sky-400 block mb-1">SET 1 & 2: Isınma ve Kontrol</strong>
-                    <p class="text-xs">Hareketi yavaş yap, kası hisset. Eklemleri asıl yüke hazırla. Belirtilen tekrar sayısına ulaş.</p>
+                <div class="bg-slate-900/50 p-3 rounded-xl border border-slate-800 text-xs">
+                    <strong class="text-sky-400 block mb-1">SET 1 & 2: Kontrol</strong>
+                    Yavaş ve kontrollü tekrar.
                 </div>
-                <div class="bg-slate-900/50 p-3 rounded-xl border border-amber-900/50">
-                    <strong class="text-amber-400 block mb-1">SET 3 & 4: Patlayıcı (Explosive)</strong>
-                    <p class="text-xs">Dambılı kaldırırken <strong>hızlı ve sert</strong> kaldır, indirirken 3-4 saniye direnerek yavaşça indir. Tekrar: <span class="text-white font-bold">MAX</span></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="glass-panel p-6 border border-sky-500/20">
-            <h3 class="abana-font text-lg text-white italic mb-4"><i class="fas fa-calendar-alt text-sky-500 mr-2"></i>HAFTALIK PROGRAM</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
-                <div class="bg-slate-900/80 p-3 rounded-xl border border-emerald-500/30 text-center">
-                    <span class="block text-[10px] text-slate-400 font-bold mb-1">PAZARTESİ</span>
-                    <strong class="text-emerald-400 text-sm">GÜN 1: ÇEKİŞ</strong>
-                </div>
-                <div class="bg-slate-900/80 p-3 rounded-xl border border-sky-500/30 text-center">
-                    <span class="block text-[10px] text-slate-400 font-bold mb-1">SALI</span>
-                    <strong class="text-sky-400 text-sm">GÜN 2: İTİŞ</strong>
-                </div>
-                <div class="bg-slate-900/80 p-3 rounded-xl border border-red-500/30 text-center opacity-70">
-                    <span class="block text-[10px] text-slate-400 font-bold mb-1">ÇARŞAMBA</span>
-                    <strong class="text-red-400 text-sm">OFF</strong>
-                </div>
-                <div class="bg-slate-900/80 p-3 rounded-xl border border-amber-500/30 text-center">
-                    <span class="block text-[10px] text-slate-400 font-bold mb-1">PERŞEMBE</span>
-                    <strong class="text-amber-400 text-sm">GÜN 3: BACAK</strong>
-                </div>
-                <div class="bg-slate-900/80 p-3 rounded-xl border border-red-500/30 text-center opacity-70">
-                    <span class="block text-[10px] text-slate-400 font-bold mb-1">CUMA</span>
-                    <strong class="text-red-400 text-sm">OFF</strong>
-                </div>
-                <div class="bg-slate-900/80 p-3 rounded-xl border border-emerald-500/30 text-center">
-                    <span class="block text-[10px] text-slate-400 font-bold mb-1">CUMARTESİ</span>
-                    <strong class="text-emerald-400 text-sm">GÜN 1</strong>
-                </div>
-                <div class="bg-slate-900/80 p-3 rounded-xl border border-sky-500/30 text-center">
-                    <span class="block text-[10px] text-slate-400 font-bold mb-1">PAZAR</span>
-                    <strong class="text-sky-400 text-sm">GÜN 2</strong>
+                <div class="bg-slate-900/50 p-3 rounded-xl border border-amber-900/50 text-xs">
+                    <strong class="text-amber-400 block mb-1">SET 3 & 4: Patlayıcı</strong>
+                    Hızlı kaldır, 3sn yavaş indir.
                 </div>
             </div>
         </div>
 
         <section class="bg-emerald-900/5 p-6 rounded-3xl border border-emerald-500/10 mt-12">
-            <h2 class="abana-font text-3xl text-white italic mb-2 day-title before:bg-emerald-500">GÜN 1: ÇEKİŞ (PULL)</h2>
+            <h2 class="abana-font text-2xl text-white italic mb-6 day-title before:bg-emerald-500 uppercase">GÜN 1: ÇEKİŞ (PULL)</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 
                 <div class="glass-panel p-4 flex flex-col justify-between">
-                    <div class="image-container mb-4"><img src="https://www.bodybuilding.com/images/2020/xdb/originals/xdb-88m-one-arm-dumbbell-row-m1-16x9.jpg" alt="Yerden Row (Doğru Form)"></div>
-                    <div class="flex justify-between items-start mb-2">
-                        <h4 class="font-black text-white uppercase text-sm">1. Yerden Row</h4>
-                        <span class="text-[9px] text-emerald-400 font-bold border border-emerald-400/30 px-2 rounded">SIRT</span>
+                    <div class="image-container mb-4">
+                        <img src="https://placehold.co/600x400/0f172a/38bdf8?text=YERDEN+ROW" alt="Yerden Row">
                     </div>
-                    <div class="flex justify-between items-center bg-black/30 p-2 rounded-lg mb-2 border border-emerald-500/10">
-                        <span class="text-[9px] text-emerald-400 font-bold tracking-widest">4 SET</span>
-                        <span class="text-[11px] text-white font-black">15-15-MAX-MAX</span>
+                    <h4 class="font-black text-white uppercase text-sm mb-2">1. Yerden Row</h4>
+                    <div class="flex justify-between items-center bg-black/30 p-2 rounded-lg mb-2 border border-emerald-500/10 text-[11px]">
+                        <span class="text-emerald-400 font-bold">4 SET</span>
+                        <span class="text-white font-black">15-15-MAX-MAX</span>
                     </div>
-                    <button onclick="startTimer(this, 60)" class="mt-2 w-full bg-slate-800 hover:bg-emerald-600 py-3 rounded-xl text-xs font-bold transition-all uppercase tracking-widest">60s Mola</button>
+                    <button onclick="startTimer(this, 60)" class="mt-2 w-full bg-slate-800 hover:bg-emerald-600 py-3 rounded-xl text-xs font-bold transition-all uppercase">60s Mola</button>
                 </div>
 
                 <div class="glass-panel p-4 flex flex-col justify-between">
-                    <div class="image-container mb-4"><img src="https://www.bodybuilding.com/images/2020/xdb/originals/xdb-102m-dumbbell-lying-rear-lateral-raise-m1-16x9.jpg" alt="Sehpada Ters Fly (Doğru Form)"></div>
-                    <div class="flex justify-between items-start mb-2">
-                        <h4 class="font-black text-white uppercase text-sm">2. Sehpada Ters Fly</h4>
-                        <span class="text-[9px] text-emerald-400 font-bold border border-emerald-400/30 px-2 rounded">ARKA OMUZ</span>
+                    <div class="image-container mb-4">
+                        <img src="https://placehold.co/600x400/0f172a/38bdf8?text=TERS+FLY" alt="Ters Fly">
                     </div>
-                    <div class="flex justify-between items-center bg-black/30 p-2 rounded-lg mb-2 border border-emerald-500/10">
-                        <span class="text-[9px] text-emerald-400 font-bold tracking-widest">4 SET</span>
-                        <span class="text-[11px] text-white font-black">12-12-MAX-MAX</span>
+                    <h4 class="font-black text-white uppercase text-sm mb-2">2. Ters Fly</h4>
+                    <div class="flex justify-between items-center bg-black/30 p-2 rounded-lg mb-2 border border-emerald-500/10 text-[11px]">
+                        <span class="text-emerald-400 font-bold">4 SET</span>
+                        <span class="text-white font-black">12-12-MAX-MAX</span>
                     </div>
-                    <button onclick="startTimer(this, 60)" class="mt-2 w-full bg-slate-800 hover:bg-emerald-600 py-3 rounded-xl text-xs font-bold transition-all uppercase tracking-widest">60s Mola</button>
+                    <button onclick="startTimer(this, 60)" class="mt-2 w-full bg-slate-800 hover:bg-emerald-600 py-3 rounded-xl text-xs font-bold transition-all uppercase">60s Mola</button>
                 </div>
 
                 <div class="glass-panel p-4 flex flex-col justify-between">
-                    <div class="image-container mb-4"><img src="https://www.bodybuilding.com/images/2020/xdb/originals/xdb-10m-concentration-curl-m1-16x9.jpg" alt="Concentration Curl (Doğru Form)"></div>
-                    <div class="flex justify-between items-start mb-2">
-                        <h4 class="font-black text-white uppercase text-sm">3. Concentration</h4>
-                        <span class="text-[9px] text-pink-400 font-bold border border-pink-400/30 px-2 rounded">BICEPS</span>
+                    <div class="image-container mb-4">
+                        <img src="https://placehold.co/600x400/0f172a/ec4899?text=CONCENTRATION+CURL" alt="Concentration Curl">
                     </div>
-                    <div class="flex justify-between items-center bg-black/30 p-2 rounded-lg mb-2 border border-pink-500/10">
-                        <span class="text-[9px] text-pink-400 font-bold tracking-widest">4 SET</span>
-                        <span class="text-[11px] text-white font-black">12-12-MAX-MAX</span>
+                    <h4 class="font-black text-white uppercase text-sm mb-2">3. Concentration</h4>
+                    <div class="flex justify-between items-center bg-black/30 p-2 rounded-lg mb-2 border border-pink-500/10 text-[11px]">
+                        <span class="text-pink-400 font-bold">4 SET</span>
+                        <span class="text-white font-black">12-12-MAX-MAX</span>
                     </div>
-                    <button onclick="startTimer(this, 45)" class="mt-2 w-full bg-slate-800 hover:bg-emerald-600 py-3 rounded-xl text-xs font-bold transition-all uppercase tracking-widest">45s Mola</button>
+                    <button onclick="startTimer(this, 45)" class="mt-2 w-full bg-slate-800 hover:bg-emerald-600 py-3 rounded-xl text-xs font-bold transition-all uppercase">45s Mola</button>
                 </div>
 
                 <div class="glass-panel p-4 flex flex-col justify-between">
-                    <div class="image-container mb-4"><img src="https://www.bodybuilding.com/images/2020/xdb/originals/xdb-80m-dumbbell-biceps-curl-m1-16x9.jpg" alt="Sehpada Curl (Doğru Form)"></div>
-                    <div class="flex justify-between items-start mb-2">
-                        <h4 class="font-black text-white uppercase text-sm">4. Sehpada Curl</h4>
-                        <span class="text-[9px] text-pink-400 font-bold border border-pink-400/30 px-2 rounded">BICEPS</span>
+                    <div class="image-container mb-4">
+                        <img src="https://placehold.co/600x400/0f172a/ec4899?text=SEHPADA+CURL" alt="Sehpada Curl">
                     </div>
-                    <div class="flex justify-between items-center bg-black/30 p-2 rounded-lg mb-2 border border-pink-500/10">
-                        <span class="text-[9px] text-pink-400 font-bold tracking-widest">4 SET</span>
-                        <span class="text-[11px] text-white font-black">12-12-MAX-MAX</span>
+                    <h4 class="font-black text-white uppercase text-sm mb-2">4. Sehpada Curl</h4>
+                    <div class="flex justify-between items-center bg-black/30 p-2 rounded-lg mb-2 border border-pink-500/10 text-[11px]">
+                        <span class="text-pink-400 font-bold">4 SET</span>
+                        <span class="text-white font-black">12-12-MAX-MAX</span>
                     </div>
-                    <button onclick="startTimer(this, 45)" class="mt-2 w-full bg-slate-800 hover:bg-emerald-600 py-3 rounded-xl text-xs font-bold transition-all uppercase tracking-widest">45s Mola</button>
+                    <button onclick="startTimer(this, 45)" class="mt-2 w-full bg-slate-800 hover:bg-emerald-600 py-3 rounded-xl text-xs font-bold transition-all uppercase">45s Mola</button>
                 </div>
             </div>
         </section>
 
         <section class="bg-sky-900/5 p-6 rounded-3xl border border-sky-500/10 mt-12">
-            <h2 class="abana-font text-3xl text-white italic mb-2 day-title before:bg-sky-500">GÜN 2: İTİŞ (PUSH)</h2>
+            <h2 class="abana-font text-2xl text-white italic mb-6 day-title before:bg-sky-500 uppercase">GÜN 2: İTİŞ (PUSH)</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 
                 <div class="glass-panel p-4 flex flex-col justify-between">
-                    <div class="image-container mb-4"><img src="https://www.bodybuilding.com/images/2020/xdb/originals/xdb-129m-dumbbell-floor-press-m1-16x9.jpg" alt="Floor Press (Doğru Form)"></div>
-                    <div class="flex justify-between items-start mb-2">
-                        <h4 class="font-black text-white uppercase text-sm">1. Floor Press</h4>
-                        <span class="text-[9px] text-sky-400 font-bold border border-sky-400/30 px-2 rounded">GÖĞÜS</span>
+                    <div class="image-container mb-4">
+                        <img src="https://placehold.co/600x400/0f172a/0ea5e9?text=FLOOR+PRESS" alt="Floor Press">
                     </div>
-                    <div class="flex justify-between items-center bg-black/30 p-2 rounded-lg mb-2 border border-sky-500/10">
-                        <span class="text-[9px] text-sky-400 font-bold tracking-widest">4 SET</span>
-                        <span class="text-[11px] text-white font-black">15-15-MAX-MAX</span>
+                    <h4 class="font-black text-white uppercase text-sm mb-2">1. Floor Press</h4>
+                    <div class="flex justify-between items-center bg-black/30 p-2 rounded-lg mb-2 border border-sky-500/10 text-[11px]">
+                        <span class="text-sky-400 font-bold">4 SET</span>
+                        <span class="text-white font-black">15-15-MAX-MAX</span>
                     </div>
-                    <button onclick="startTimer(this, 60)" class="mt-2 w-full bg-slate-800 hover:bg-sky-600 py-3 rounded-xl text-xs font-bold transition-all uppercase tracking-widest">60s Mola</button>
+                    <button onclick="startTimer(this, 60)" class="mt-2 w-full bg-slate-800 hover:bg-sky-600 py-3 rounded-xl text-xs font-bold transition-all uppercase">60s Mola</button>
                 </div>
 
                 <div class="glass-panel p-4 flex flex-col justify-between">
-                    <div class="image-container mb-4"><img src="https://www.bodybuilding.com/images/2020/xdb/originals/xdb-16m-dumbbell-fly-m1-16x9.jpg" alt="Sehpada Fly (Doğru Form)"></div>
-                    <div class="flex justify-between items-start mb-2">
-                        <h4 class="font-black text-white uppercase text-sm">2. Sehpada Fly</h4>
-                        <span class="text-[9px] text-sky-400 font-bold border border-sky-400/30 px-2 rounded">GÖĞÜS</span>
+                    <div class="image-container mb-4">
+                        <img src="https://placehold.co/600x400/0f172a/0ea5e9?text=SEHPADA+FLY" alt="Sehpada Fly">
                     </div>
-                    <div class="flex justify-between items-center bg-black/30 p-2 rounded-lg mb-2 border border-sky-500/10">
-                        <span class="text-[9px] text-sky-400 font-bold tracking-widest">4 SET</span>
-                        <span class="text-[11px] text-white font-black">15-15-MAX-MAX</span>
+                    <h4 class="font-black text-white uppercase text-sm mb-2">2. Sehpada Fly</h4>
+                    <div class="flex justify-between items-center bg-black/30 p-2 rounded-lg mb-2 border border-sky-500/10 text-[11px]">
+                        <span class="text-sky-400 font-bold">4 SET</span>
+                        <span class="text-white font-black">15-15-MAX-MAX</span>
                     </div>
-                    <button onclick="startTimer(this, 60)" class="mt-2 w-full bg-slate-800 hover:bg-sky-600 py-3 rounded-xl text-xs font-bold transition-all uppercase tracking-widest">60s Mola</button>
+                    <button onclick="startTimer(this, 60)" class="mt-2 w-full bg-slate-800 hover:bg-sky-600 py-3 rounded-xl text-xs font-bold transition-all uppercase">60s Mola</button>
                 </div>
 
                 <div class="glass-panel p-4 flex flex-col justify-between">
-                    <div class="image-container mb-4"><img src="https://www.bodybuilding.com/images/2020/xdb/originals/xdb-24m-dumbbell-kickback-m1-16x9.jpg" alt="DB Kickback (Doğru Form)"></div>
-                    <div class="flex justify-between items-start mb-2">
-                        <h4 class="font-black text-white uppercase text-sm">3. DB Kickback</h4>
-                        <span class="text-[9px] text-purple-400 font-bold border border-purple-400/30 px-2 rounded">TRICEPS</span>
+                    <div class="image-container mb-4">
+                        <img src="https://placehold.co/600x400/0f172a/c084fc?text=DB+KICKBACK" alt="DB Kickback">
                     </div>
-                    <div class="flex justify-between items-center bg-black/30 p-2 rounded-lg mb-2 border border-purple-500/10">
-                        <span class="text-[9px] text-purple-400 font-bold tracking-widest">4 SET</span>
-                        <span class="text-[11px] text-white font-black">12-12-MAX-MAX</span>
+                    <h4 class="font-black text-white uppercase text-sm mb-2">3. DB Kickback</h4>
+                    <div class="flex justify-between items-center bg-black/30 p-2 rounded-lg mb-2 border border-purple-500/10 text-[11px]">
+                        <span class="text-purple-400 font-bold">4 SET</span>
+                        <span class="text-white font-black">12-12-MAX-MAX</span>
                     </div>
-                    <button onclick="startTimer(this, 45)" class="mt-2 w-full bg-slate-800 hover:bg-sky-600 py-3 rounded-xl text-xs font-bold transition-all uppercase tracking-widest">45s Mola</button>
+                    <button onclick="startTimer(this, 45)" class="mt-2 w-full bg-slate-800 hover:bg-sky-600 py-3 rounded-xl text-xs font-bold transition-all uppercase">45s Mola</button>
                 </div>
 
                 <div class="glass-panel p-4 flex flex-col justify-between">
-                    <div class="image-container mb-4"><img src="https://www.bodybuilding.com/images/2020/xdb/originals/xdb-1m-bench-dip-m1-16x9.jpg" alt="Bench Dips (Doğru Form)"></div>
-                    <div class="flex justify-between items-start mb-2">
-                        <h4 class="font-black text-white uppercase text-sm">4. Bench Dips</h4>
-                        <span class="text-[9px] text-purple-400 font-bold border border-purple-400/30 px-2 rounded">TRICEPS</span>
+                    <div class="image-container mb-4">
+                        <img src="https://placehold.co/600x400/0f172a/c084fc?text=BENCH+DIPS" alt="Bench Dips">
                     </div>
-                    <div class="flex justify-between items-center bg-black/30 p-2 rounded-lg mb-2 border border-purple-500/10">
-                        <span class="text-[9px] text-purple-400 font-bold tracking-widest">4 SET</span>
-                        <span class="text-[11px] text-white font-black">MAX TEKRAR</span>
+                    <h4 class="font-black text-white uppercase text-sm mb-2">4. Bench Dips</h4>
+                    <div class="flex justify-between items-center bg-black/30 p-2 rounded-lg mb-2 border border-purple-500/10 text-[11px]">
+                        <span class="text-purple-400 font-bold">4 SET</span>
+                        <span class="text-white font-black">MAX TEKRAR</span>
                     </div>
-                    <button onclick="startTimer(this, 45)" class="mt-2 w-full bg-slate-800 hover:bg-sky-600 py-3 rounded-xl text-xs font-bold transition-all uppercase tracking-widest">45s Mola</button>
+                    <button onclick="startTimer(this, 45)" class="mt-2 w-full bg-slate-800 hover:bg-sky-600 py-3 rounded-xl text-xs font-bold transition-all uppercase">45s Mola</button>
                 </div>
             </div>
         </section>
@@ -211,13 +166,12 @@
     </main>
 
     <script>
-        // Sayaç fonksiyonu (Bozulmadı, aynı çalışıyor)
         function startTimer(button, seconds) {
             if (button.dataset.running === "true") return;
             const originalText = button.innerHTML;
             let timeLeft = seconds;
             button.dataset.running = "true";
-            button.className = "mt-2 w-full bg-slate-700 py-3 rounded-xl text-xs font-bold transition-all uppercase tracking-widest text-sky-400 border border-sky-500/30";
+            button.className = "mt-2 w-full bg-slate-700 py-3 rounded-xl text-xs font-bold transition-all uppercase text-sky-400 border border-sky-500/30";
             
             const interval = setInterval(() => {
                 timeLeft--;
@@ -226,7 +180,7 @@
                     clearInterval(interval);
                     button.dataset.running = "false";
                     button.innerHTML = originalText;
-                    button.className = "mt-2 w-full bg-slate-800 hover:bg-sky-600 py-3 rounded-xl text-xs font-bold transition-all uppercase tracking-widest";
+                    button.className = "mt-2 w-full bg-slate-800 hover:bg-sky-600 py-3 rounded-xl text-xs font-bold transition-all uppercase";
                 }
             }, 1000);
         }
