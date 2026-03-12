@@ -13,8 +13,11 @@
         .abana-font { font-family: 'Syncopate', sans-serif; }
         .glass-panel { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(56, 189, 248, 0.1); border-radius: 1.5rem; transition: transform 0.2s; }
         .glass-panel:hover { border-color: rgba(56, 189, 248, 0.4); }
-        .video-container { position: relative; overflow: hidden; border-radius: 1rem; aspect-ratio: 16/9; border: 1px solid rgba(255, 255, 255, 0.05); }
-        iframe { width: 100%; height: 100%; pointer-events: none; filter: brightness(0.85) contrast(1.1); }
+        
+        /* Video Container yerine Resim Container */
+        .image-container { position: relative; overflow: hidden; border-radius: 1rem; aspect-ratio: 16/9; border: 1px solid rgba(255, 255, 255, 0.05); background-color: #000; }
+        .image-container img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.8) contrast(1.1); }
+        
         .gradient-text { background: linear-gradient(to right, #38bdf8, #818cf8); -webkit-background-clip: text; color: transparent; }
         .day-title { position: relative; padding-left: 1rem; }
         .day-title::before { content: ''; position: absolute; left: 0; top: 10%; height: 80%; width: 5px; border-radius: 4px; }
@@ -94,7 +97,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 
                 <div class="glass-panel p-4 flex flex-col justify-between">
-                    <div class="video-container mb-4"><iframe src="https://www.youtube.com/embed/6gvmcqr226U?autoplay=1&mute=1&loop=1&playlist=6gvmcqr226U"></iframe></div>
+                    <div class="image-container mb-4"><img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?q=80&w=600&auto=format&fit=crop" alt="Yerden Row"></div>
                     <div class="flex justify-between items-start mb-2">
                         <h4 class="font-black text-white uppercase text-sm">1. Yerden Row</h4>
                         <span class="text-[9px] text-emerald-400 font-bold border border-emerald-400/30 px-2 rounded">SIRT</span>
@@ -107,7 +110,7 @@
                 </div>
 
                 <div class="glass-panel p-4 flex flex-col justify-between">
-                    <div class="video-container mb-4"><iframe src="https://www.youtube.com/embed/SashvA93N3A?autoplay=1&mute=1&loop=1&playlist=SashvA93N3A"></iframe></div>
+                    <div class="image-container mb-4"><img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?q=80&w=600&auto=format&fit=crop" alt="Sehpada Ters Fly"></div>
                     <div class="flex justify-between items-start mb-2">
                         <h4 class="font-black text-white uppercase text-sm">2. Sehpada Ters Fly</h4>
                         <span class="text-[9px] text-emerald-400 font-bold border border-emerald-400/30 px-2 rounded">ARKA OMUZ</span>
@@ -120,7 +123,7 @@
                 </div>
 
                 <div class="glass-panel p-4 flex flex-col justify-between">
-                    <div class="video-container mb-4"><iframe src="https://www.youtube.com/embed/0WjVatL8p_E?autoplay=1&mute=1&loop=1&playlist=0WjVatL8p_E"></iframe></div>
+                    <div class="image-container mb-4"><img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=600&auto=format&fit=crop" alt="Concentration Curl"></div>
                     <div class="flex justify-between items-start mb-2">
                         <h4 class="font-black text-white uppercase text-sm">3. Concentration</h4>
                         <span class="text-[9px] text-pink-400 font-bold border border-pink-400/30 px-2 rounded">BICEPS</span>
@@ -133,7 +136,7 @@
                 </div>
 
                 <div class="glass-panel p-4 flex flex-col justify-between">
-                    <div class="video-container mb-4"><iframe src="https://www.youtube.com/embed/C_b-WofC-F4?autoplay=1&mute=1&loop=1&playlist=C_b-WofC-F4"></iframe></div>
+                    <div class="image-container mb-4"><img src="https://images.unsplash.com/photo-1581009146145-b5ef03a726ec?q=80&w=600&auto=format&fit=crop" alt="Sehpada Curl"></div>
                     <div class="flex justify-between items-start mb-2">
                         <h4 class="font-black text-white uppercase text-sm">4. Sehpada Curl</h4>
                         <span class="text-[9px] text-pink-400 font-bold border border-pink-400/30 px-2 rounded">BICEPS</span>
@@ -150,8 +153,9 @@
         <section class="bg-sky-900/5 p-6 rounded-3xl border border-sky-500/10 mt-12">
             <h2 class="abana-font text-3xl text-white italic mb-2 day-title before:bg-sky-500">GÜN 2: İTİŞ (PUSH)</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
                 <div class="glass-panel p-4 flex flex-col justify-between">
-                    <div class="video-container mb-4"><iframe src="https://www.youtube.com/embed/uUGDRwge4F8?autoplay=1&mute=1&loop=1&playlist=uUGDRwge4F8"></iframe></div>
+                    <div class="image-container mb-4"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=600&auto=format&fit=crop" alt="Floor Press"></div>
                     <div class="flex justify-between items-start mb-2">
                         <h4 class="font-black text-white uppercase text-sm">1. Floor Press</h4>
                         <span class="text-[9px] text-sky-400 font-bold border border-sky-400/30 px-2 rounded">GÖĞÜS</span>
@@ -164,7 +168,7 @@
                 </div>
 
                 <div class="glass-panel p-4 flex flex-col justify-between">
-                    <div class="video-container mb-4"><iframe src="https://www.youtube.com/embed/eozdVDA78K0?autoplay=1&mute=1&loop=1&playlist=eozdVDA78K0"></iframe></div>
+                    <div class="image-container mb-4"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=600&auto=format&fit=crop" alt="Sehpada Fly"></div>
                     <div class="flex justify-between items-start mb-2">
                         <h4 class="font-black text-white uppercase text-sm">2. Sehpada Fly</h4>
                         <span class="text-[9px] text-sky-400 font-bold border border-sky-400/30 px-2 rounded">GÖĞÜS</span>
@@ -177,7 +181,7 @@
                 </div>
 
                 <div class="glass-panel p-4 flex flex-col justify-between">
-                    <div class="video-container mb-4"><iframe src="https://www.youtube.com/embed/6SSzrbKY18A?autoplay=1&mute=1&loop=1&playlist=6SSzrbKY18A"></iframe></div>
+                    <div class="image-container mb-4"><img src="https://images.unsplash.com/photo-1596357395217-80df13130fff?q=80&w=600&auto=format&fit=crop" alt="DB Kickback"></div>
                     <div class="flex justify-between items-start mb-2">
                         <h4 class="font-black text-white uppercase text-sm">3. DB Kickback</h4>
                         <span class="text-[9px] text-purple-400 font-bold border border-purple-400/30 px-2 rounded">TRICEPS</span>
@@ -190,7 +194,7 @@
                 </div>
 
                 <div class="glass-panel p-4 flex flex-col justify-between">
-                    <div class="video-container mb-4"><iframe src="https://www.youtube.com/embed/0326dy_-EXM?autoplay=1&mute=1&loop=1&playlist=0326dy_-EXM"></iframe></div>
+                    <div class="image-container mb-4"><img src="https://images.unsplash.com/photo-1590239922233-a83f8bbdbff1?q=80&w=600&auto=format&fit=crop" alt="Bench Dips"></div>
                     <div class="flex justify-between items-start mb-2">
                         <h4 class="font-black text-white uppercase text-sm">4. Bench Dips</h4>
                         <span class="text-[9px] text-purple-400 font-bold border border-purple-400/30 px-2 rounded">TRICEPS</span>
@@ -207,6 +211,7 @@
     </main>
 
     <script>
+        // Sayaç fonksiyonu (Bozulmadı, aynı çalışıyor)
         function startTimer(button, seconds) {
             if (button.dataset.running === "true") return;
             const originalText = button.innerHTML;
