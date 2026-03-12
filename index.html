@@ -3,172 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abana-Fitness | Pro Training V2</title>
+    <title>Abana-Fitness | Pro</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
-        :root { --bg-dark: #020617; --accent-push: #0ea5e9; --accent-pull: #f59e0b; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg-dark); color: #f8fafc; margin: 0; padding: 0; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: #f8fafc; }
         .abana-font { font-family: 'Syncopate', sans-serif; }
-        .glass-card { background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 1.5rem; backdrop-filter: blur(10px); transition: 0.3s; }
+        .glass-card { background: rgba(15, 23, 42, 0.4); border: 1px solid rgba(56, 189, 248, 0.1); border-radius: 1.5rem; transition: 0.3s; }
         .video-box { position: relative; overflow: hidden; border-radius: 1rem; aspect-ratio: 16/9; background: #000; }
-        iframe { width: 100%; height: 100%; border: none; }
-        .tab-btn { transition: all 0.3s ease; cursor: pointer; }
-        .tab-btn.active-push { background: var(--accent-push); color: white; box-shadow: 0 0 20px rgba(14, 165, 233, 0.4); }
-        .tab-btn.active-pull { background: var(--accent-pull); color: white; box-shadow: 0 0 20px rgba(245, 158, 11, 0.4); }
-        .day-badge { font-size: 0.65rem; padding: 4px 10px; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); }
-        .active-day-push { background: #0ea5e9 !important; border-color: #0ea5e9; color: white !important; }
-        .active-day-pull { background: #f59e0b !important; border-color: #f59e0b; color: white !important; }
+        iframe { width: 100%; height: 100%; pointer-events: none; opacity: 0.8; border: none; }
+        .tab-btn.active { background-color: #0ea5e9; color: white; border-color: #0ea5e9; box-shadow: 0 0 15px rgba(14, 165, 233, 0.4); }
     </style>
 </head>
 <body class="pb-20">
 
-    <header class="p-6 max-w-5xl mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-10">
-            <h1 class="abana-font text-2xl font-black tracking-tighter italic uppercase text-white">
-                ABANA<span class="text-sky-500">-FITNESS</span>
-            </h1>
-            <div class="flex gap-2 overflow-x-auto pb-2">
-                <div class="day-badge active-day-push text-center"><p>PZT</p><span class="text-[8px] font-bold">İTİŞ</span></div>
-                <div class="day-badge active-day-pull text-center"><p>SAL</p><span class="text-[8px] font-bold">ÇEKİŞ</span></div>
-                <div class="day-badge text-center opacity-40"><p>ÇAR</p><span class="text-[8px]">OFF</span></div>
-                <div class="day-badge active-day-push text-center"><p>PER</p><span class="text-[8px] font-bold">İTİŞ</span></div>
-                <div class="day-badge active-day-pull text-center"><p>CUM</p><span class="text-[8px] font-bold">ÇEKİŞ</span></div>
-                <div class="day-badge text-center opacity-40"><p>CMT</p><span class="text-[8px]">OFF</span></div>
-                <div class="day-badge text-center opacity-40"><p>PAZ</p><span class="text-[8px]">OFF</span></div>
-            </div>
+    <nav class="sticky top-0 z-50 bg-[#020617]/95 backdrop-blur-md border-b border-sky-900/30 p-6 text-center">
+        <h1 class="abana-font text-xl font-bold tracking-tighter uppercase text-white mb-4">
+            ABANA<span class="text-sky-500">-FITNESS</span>
+        </h1>
+        <div class="flex justify-center gap-2">
+            <button onclick="switchTab('itis')" id="btn-itis" class="tab-btn active px-6 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest border border-sky-500/30 transition-all">1. GÜN: İTİŞ</button>
+            <button onclick="switchTab('cekis')" id="btn-cekis" class="tab-btn px-6 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest border border-sky-500/30 transition-all">2. GÜN: ÇEKİŞ</button>
         </div>
+        <p class="text-[8px] text-slate-500 mt-3 tracking-[0.5em] uppercase font-bold">Haftalık: İtiş - Çekiş - Off - İtiş - Çekiş - Off - Off</p>
+    </nav>
 
-        <div class="flex bg-slate-900/80 p-1.5 rounded-2xl gap-2 border border-white/5">
-            <button onclick="switchTab('itis')" id="btn-itis" class="tab-btn active-push flex-1 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest italic">1. GÜN: İTİŞ</button>
-            <button onclick="switchTab('cekis')" id="btn-cekis" class="tab-btn flex-1 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest italic">2. GÜN: ÇEKİŞ</button>
-        </div>
-    </header>
-
-    <main class="max-w-5xl mx-auto px-4">
+    <main class="max-w-6xl mx-auto p-4 mt-4">
+        
         <div id="tab-itis" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="glass-card p-4 space-y-4">
+            
+            <div class="glass-card p-5 space-y-4">
                 <div class="video-box"><iframe src="https://www.youtube.com/embed/uUGDRwge4F8?autoplay=1&mute=1&loop=1&playlist=uUGDRwge4F8"></iframe></div>
                 <div class="flex justify-between items-center">
-                    <div><h3 class="text-xs font-black uppercase italic">Dambıl Yer Press</h3><p class="text-[9px] text-sky-400 font-bold">GÖĞÜS</p></div>
-                    <span class="text-xs font-black bg-sky-500/20 text-sky-400 px-3 py-1 rounded-lg">12X</span>
+                    <h3 class="font-bold text-[11px] uppercase italic">Dambıl Yer Press</h3>
+                    <span class="bg-sky-500 text-white text-[10px] px-3 py-1 rounded-full font-black">12X</span>
                 </div>
             </div>
 
-            <div class="glass-card p-4 space-y-4 border-b-2 border-sky-500/20">
+            <div class="glass-card p-5 space-y-4">
                 <div class="video-box"><iframe src="https://www.youtube.com/embed/eozdVDA78K0?autoplay=1&mute=1&loop=1&playlist=eozdVDA78K0"></iframe></div>
                 <div class="flex justify-between items-center">
-                    <div><h3 class="text-xs font-black uppercase italic">Dambıl Bench Sinek</h3><p class="text-[9px] text-sky-400 font-bold">GÖĞÜS AÇIŞ</p></div>
-                    <span class="text-xs font-black bg-sky-500/20 text-sky-400 px-3 py-1 rounded-lg">10X</span>
+                    <h3 class="font-bold text-[11px] uppercase italic">Dambıl Bench Sinek</h3>
+                    <span class="bg-sky-500 text-white text-[10px] px-3 py-1 rounded-full font-black">10X</span>
                 </div>
             </div>
 
-            <div class="glass-card p-4 space-y-4">
+            <div class="glass-card p-5 space-y-4">
                 <div class="video-box"><iframe src="https://www.youtube.com/embed/pZ7itHofYI0?autoplay=1&mute=1&loop=1&playlist=pZ7itHofYI0"></iframe></div>
                 <div class="flex justify-between items-center">
-                    <div><h3 class="text-xs font-black uppercase italic">Kombo Press</h3><p class="text-[9px] text-sky-400 font-bold">İÇ GÖĞÜS</p></div>
-                    <span class="text-xs font-black bg-sky-500/20 text-sky-400 px-3 py-1 rounded-lg">10X</span>
+                    <h3 class="font-bold text-[11px] uppercase italic">Fly + Dar Press</h3>
+                    <span class="bg-sky-500 text-white text-[10px] px-3 py-1 rounded-full font-black">10X</span>
                 </div>
             </div>
 
-            <div class="glass-card p-4 space-y-4">
+            <div class="glass-card p-5 space-y-4">
                 <div class="video-box"><iframe src="https://www.youtube.com/embed/5Y3reV4In_4?autoplay=1&mute=1&loop=1&playlist=5Y3reV4In_4"></iframe></div>
                 <div class="flex justify-between items-center">
-                    <div><h3 class="text-xs font-black uppercase italic">Dambıl Pullover</h3><p class="text-[9px] text-sky-400 font-bold">GÖĞÜS & SIRT</p></div>
-                    <span class="text-xs font-black bg-sky-500/20 text-sky-400 px-3 py-1 rounded-lg">10X</span>
+                    <h3 class="font-bold text-[11px] uppercase italic">Dambıl Pullover</h3>
+                    <span class="bg-sky-500 text-white text-[10px] px-3 py-1 rounded-full font-black">10X</span>
                 </div>
             </div>
 
-            <div class="glass-card p-4 space-y-4">
+            <div class="glass-card p-5 space-y-4">
                 <div class="video-box"><iframe src="https://www.youtube.com/embed/oG7_S_X6M74?autoplay=1&mute=1&loop=1&playlist=oG7_S_X6M74"></iframe></div>
                 <div class="flex justify-between items-center">
-                    <div><h3 class="text-xs font-black uppercase italic">Diamond Press</h3><p class="text-[9px] text-sky-400 font-bold">ALT GÖĞÜS</p></div>
-                    <span class="text-xs font-black bg-sky-500/20 text-sky-400 px-3 py-1 rounded-lg">10X</span>
+                    <h3 class="font-bold text-[11px] uppercase italic">Diamond Press</h3>
+                    <span class="bg-sky-500 text-white text-[10px] px-3 py-1 rounded-full font-black">10X</span>
                 </div>
             </div>
 
-            <div class="glass-card p-4 space-y-4">
+            <div class="glass-card p-5 space-y-4">
                 <div class="video-box"><iframe src="https://www.youtube.com/embed/nRiJVZDpdL0?autoplay=1&mute=1&loop=1&playlist=nRiJVZDpdL0"></iframe></div>
                 <div class="flex justify-between items-center">
-                    <div><h3 class="text-xs font-black uppercase italic">Üç Başlı Kas Açma</h3><p class="text-[9px] text-sky-400 font-bold">ARKA KOL</p></div>
-                    <span class="text-xs font-black bg-sky-500/20 text-sky-400 px-3 py-1 rounded-lg">10X</span>
+                    <h3 class="font-bold text-[11px] uppercase italic">Arka Kol Extension</h3>
+                    <span class="bg-sky-500 text-white text-[10px] px-3 py-1 rounded-full font-black">10X</span>
                 </div>
             </div>
 
-            <div class="glass-card p-4 space-y-4">
+            <div class="glass-card p-5 space-y-4">
                 <div class="video-box"><iframe src="https://www.youtube.com/embed/6SSzrbKY18A?autoplay=1&mute=1&loop=1&playlist=6SSzrbKY18A"></iframe></div>
                 <div class="flex justify-between items-center">
-                    <div><h3 class="text-xs font-black uppercase italic">Dambıl Kickback</h3><p class="text-[9px] text-sky-400 font-bold">ARKA KOL</p></div>
-                    <span class="text-xs font-black bg-sky-500/20 text-sky-400 px-3 py-1 rounded-lg">10X</span>
+                    <h3 class="font-bold text-[11px] uppercase italic">Dambıl Kickback</h3>
+                    <span class="bg-sky-500 text-white text-[10px] px-3 py-1 rounded-full font-black">10X</span>
                 </div>
             </div>
 
-            <div class="glass-card p-4 space-y-4">
+            <div class="glass-card p-5 space-y-4">
                 <div class="video-box"><iframe src="https://www.youtube.com/embed/0326dy_-EXM?autoplay=1&mute=1&loop=1&playlist=0326dy_-EXM"></iframe></div>
                 <div class="flex justify-between items-center">
-                    <div><h3 class="text-xs font-black uppercase italic">Bench Dips</h3><p class="text-[9px] text-sky-400 font-bold">ARKA KOL FİNAL</p></div>
-                    <span class="text-xs font-black bg-sky-500/20 text-sky-400 px-3 py-1 rounded-lg">MAX</span>
+                    <h3 class="font-bold text-[11px] uppercase italic">Bench Dips</h3>
+                    <span class="bg-sky-500 text-white text-[10px] px-3 py-1 rounded-full font-black">MAX</span>
                 </div>
             </div>
         </div>
 
         <div id="tab-cekis" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="glass-card p-4 space-y-4">
+            
+            <div class="glass-card p-5 space-y-4">
                 <div class="video-box"><iframe src="https://www.youtube.com/embed/6TSzrbKY18A?autoplay=1&mute=1&loop=1&playlist=6TSzrbKY18A"></iframe></div>
                 <div class="flex justify-between items-center">
-                    <div><h3 class="text-xs font-black uppercase italic">Eğilerek Kürek</h3><p class="text-[9px] text-amber-500 font-bold">SIRT</p></div>
-                    <span class="text-xs font-black bg-amber-500/20 text-amber-500 px-3 py-1 rounded-lg">10X</span>
+                    <h3 class="font-bold text-[11px] uppercase italic">Eğilerek Kürek</h3>
+                    <span class="bg-amber-600 text-white text-[10px] px-3 py-1 rounded-full font-black">10X</span>
                 </div>
             </div>
-            <div class="glass-card p-4 space-y-4">
+
+            <div class="glass-card p-5 space-y-4">
                 <div class="video-box"><iframe src="https://www.youtube.com/embed/6yMdhi2Dvuo?autoplay=1&mute=1&loop=1&playlist=6yMdhi2Dvuo"></iframe></div>
                 <div class="flex justify-between items-center">
-                    <div><h3 class="text-xs font-black uppercase italic">Ters Sinek</h3><p class="text-[9px] text-amber-500 font-bold">ARKA OMUZ</p></div>
-                    <span class="text-xs font-black bg-amber-500/20 text-amber-500 px-3 py-1 rounded-lg">10X</span>
+                    <h3 class="font-bold text-[11px] uppercase italic">Ters Sinek</h3>
+                    <span class="bg-amber-600 text-white text-[10px] px-3 py-1 rounded-full font-black">10X</span>
                 </div>
             </div>
-            <div class="glass-card p-4 space-y-4">
+
+            <div class="glass-card p-5 space-y-4">
                 <div class="video-box"><iframe src="https://www.youtube.com/embed/S2HAsU3Y27Y?autoplay=1&mute=1&loop=1&playlist=S2HAsU3Y27Y"></iframe></div>
                 <div class="flex justify-between items-center">
-                    <div><h3 class="text-xs font-black uppercase italic">Drag Curl</h3><p class="text-[9px] text-amber-500 font-bold">BICEPS</p></div>
-                    <span class="text-xs font-black bg-amber-500/20 text-amber-500 px-3 py-1 rounded-lg">10X</span>
+                    <h3 class="font-bold text-[11px] uppercase italic">Drag Curl</h3>
+                    <span class="bg-amber-600 text-white text-[10px] px-3 py-1 rounded-full font-black">10X</span>
                 </div>
             </div>
-            <div class="glass-card p-4 space-y-4">
+
+            <div class="glass-card p-5 space-y-4">
                 <div class="video-box"><iframe src="https://www.youtube.com/embed/7jqi2qWAuwK?autoplay=1&mute=1&loop=1&playlist=7jqi2qWAuwK"></iframe></div>
                 <div class="flex justify-between items-center">
-                    <div><h3 class="text-xs font-black uppercase italic">Çapraz Hammer</h3><p class="text-[9px] text-amber-500 font-bold">BICEPS</p></div>
-                    <span class="text-xs font-black bg-amber-500/20 text-amber-500 px-3 py-1 rounded-lg">14X</span>
+                    <h3 class="font-bold text-[11px] uppercase italic">Çapraz Hammer</h3>
+                    <span class="bg-amber-600 text-white text-[10px] px-3 py-1 rounded-full font-black">14X</span>
                 </div>
             </div>
-             <div class="glass-card p-4 space-y-4">
+
+            <div class="glass-card p-5 space-y-4">
+                <div class="video-box"><iframe src="https://www.youtube.com/embed/amCU-ziHITM?autoplay=1&mute=1&loop=1&playlist=amCU-ziHITM"></iframe></div>
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-[11px] uppercase italic">Upright Row</h3>
+                    <span class="bg-amber-600 text-white text-[10px] px-3 py-1 rounded-full font-black">10X</span>
+                </div>
+            </div>
+
+            <div class="glass-card p-5 space-y-4">
                 <div class="video-box"><iframe src="https://www.youtube.com/embed/g6qbq4LfWQY?autoplay=1&mute=1&loop=1&playlist=g6qbq4LfWQY"></iframe></div>
                 <div class="flex justify-between items-center">
-                    <div><h3 class="text-xs font-black uppercase italic">Omuz Silkme</h3><p class="text-[9px] text-amber-500 font-bold">TRAPEZ</p></div>
-                    <span class="text-xs font-black bg-amber-500/20 text-amber-500 px-3 py-1 rounded-lg">10X</span>
+                    <h3 class="font-bold text-[11px] uppercase italic">Omuz Silkme</h3>
+                    <span class="bg-amber-600 text-white text-[10px] px-3 py-1 rounded-full font-black">10X</span>
                 </div>
             </div>
+
         </div>
+
     </main>
 
     <script>
         function switchTab(tab) {
-            const itisTab = document.getElementById('tab-itis');
-            const cekisTab = document.getElementById('tab-cekis');
-            const itisBtn = document.getElementById('btn-itis');
-            const cekisBtn = document.getElementById('btn-cekis');
-
-            if(tab === 'itis') {
-                itisTab.classList.remove('hidden');
-                cekisTab.classList.add('hidden');
-                itisBtn.classList.add('active-push');
-                cekisBtn.classList.remove('active-pull');
-            } else {
-                cekisTab.classList.remove('hidden');
-                itisTab.classList.add('hidden');
-                cekisBtn.classList.add('active-pull');
-                itisBtn.classList.remove('active-push');
-            }
+            document.getElementById('tab-itis').classList.add('hidden');
+            document.getElementById('tab-cekis').classList.add('hidden');
+            document.getElementById('btn-itis').classList.remove('active');
+            document.getElementById('btn-cekis').classList.remove('active');
+            
+            document.getElementById('tab-' + tab).classList.remove('hidden');
+            document.getElementById('btn-' + tab).classList.add('active');
         }
     </script>
 </body>
