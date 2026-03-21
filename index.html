@@ -1,242 +1,252 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abana Fitness</title>
-
-<script src="https://cdn.tailwindcss.com"></script>
-
-<style>
-body{
-background:#020617;
-color:white;
-font-family:sans-serif;
-}
-
-.panel{
-background:rgba(15,23,42,0.7);
-border:1px solid rgba(56,189,248,0.2);
-border-radius:20px;
-padding:20px;
-}
-
-.video{
-aspect-ratio:16/9;
-width:100%;
-border-radius:12px;
-overflow:hidden;
-margin-bottom:10px;
-}
-
-iframe{
-width:100%;
-height:100%;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abana-Fitness | Tüm Protokol</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: #f8fafc; }
+        .abana-font { font-family: 'Syncopate', sans-serif; }
+        .glass-panel { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(56, 189, 248, 0.1); border-radius: 1.5rem; transition: transform 0.2s; }
+        .image-container { position: relative; overflow: hidden; border-radius: 1rem; aspect-ratio: 16/9; background-color: #0f172a; border: 1px solid rgba(255, 255, 255, 0.05); }
+        .image-container img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.8); }
+        .rep-badge { background: #000; border: 1px solid #334155; padding: 4px 8px; border-radius: 6px; font-size: 11px; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+    </style>
 </head>
+<body class="pb-24">
 
-<body class="p-6">
+    <nav class="sticky top-0 z-50 bg-[#020617]/90 backdrop-blur-xl border-b border-sky-900/30 p-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <h1 class="abana-font text-xl font-bold italic tracking-tighter">ABANA<span class="text-sky-500">-FITNESS</span></h1>
+            <span class="text-[10px] text-amber-500 font-bold uppercase tracking-widest animate-pulse">TÜM PROTOKOL AKTİF</span>
+        </div>
+    </nav>
 
-<h1 class="text-3xl font-bold mb-6">ABANA FITNESS</h1>
+    <main class="max-w-7xl mx-auto p-4 md:p-6 space-y-16">
 
-<!-- PUSH DAY -->
+        <div class="glass-panel p-6 border-amber-500/20 shadow-2xl shadow-amber-900/10">
+            <div class="flex items-center gap-4 mb-4">
+                <i class="fas fa-bolt text-4xl text-amber-500"></i>
+                <h3 class="abana-font text-lg text-white">4 SET: PATLAYICI MOD (5kg)</h3>
+            </div>
+            <p class="text-slate-400 text-sm leading-relaxed mb-4">Her hareket **4 Set** yapılacaktır. Set 1-2: Normal tempo. Set 3-4: Pozitif kısım (itme/çekme) maksimum patlayıcı, negatif kısım (yavaş yavaş) kontrollü. Mola: 60sn (Büyük), 45sn (İzolasyon).</p>
+            <span class="text-[11px] font-bold text-amber-400 bg-amber-950/30 p-2 rounded-lg">ÖNEMLİ: Son set "Tükenene Kadar (MAX)"</span>
+        </div>
 
-<h2 class="text-2xl mb-4">GÜN 1 – İTİŞ</h2>
+        <section>
+            <h2 class="abana-font text-3xl text-white italic Day-Title border-l-4 border-sky-500 pl-4 uppercase">1. GÜN: İTİŞ (Göğüs & Arka Kol)</h2>
+            <p class="text-slate-400 text-sm mb-12 mt-2 leading-relaxed">Bu gün, dambılları kendinden uzağa ittiğin hareketlere odaklanır. Göğüs kaslarını büyütürken arka kolları (triceps) parçalar.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-panel p-5">
+                    <div class="image-container mb-4"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Dumbbell-bench-press-1.png"></div>
+                    <div class="flex justify-between items-start mb-3">
+                        <h4 class="font-black uppercase text-sm">1. Dambıl Yer Press</h4>
+                        <div class="rep-badge text-sky-400 font-bold">12x</div>
+                    </div>
+                    <p class="text-slate-500 text-xs mb-4">Temel göğüs gücü ve kütlesi.</p>
+                    <button onclick="startTimer(this, 60)" class="w-full bg-sky-600/20 py-3 rounded-xl text-[10px] font-bold border border-sky-500/20">60s Mola</button>
+                </div>
 
-<div class="grid md:grid-cols-3 gap-6">
+                <div class="glass-panel p-5">
+                    <div class="image-container mb-4"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Dumbbell-fly-1.png"></div>
+                    <div class="flex justify-between items-start mb-3">
+                        <h4 class="font-black uppercase text-sm">2. Fly -> Dar Press Kombo</h4>
+                        <div class="rep-badge text-sky-400 font-bold">10x</div>
+                    </div>
+                    <p class="text-slate-500 text-xs mb-4">Göğsü esnetme ve iç göğüs sıkıştırma.</p>
+                    <button onclick="startTimer(this, 60)" class="w-full bg-sky-600/20 py-3 rounded-xl text-[10px] font-bold border border-sky-500/20">60s Mola</button>
+                </div>
 
-<div class="panel">
-<div class="video">
-<iframe src="https://www.youtube.com/embed/TvPviMnKg6s"></iframe>
-</div>
-<h3>Floor Press</h3>
-<p>4 SET – 12 / 12 / MAX / MAX</p>
-<button onclick="startTimer(this,60)">60s Mola</button>
-</div>
+                <div class="glass-panel p-5">
+                    <div class="image-container mb-4"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Dumbbell-bench-press-1.png"></div>
+                    <div class="flex justify-between items-start mb-3">
+                        <h4 class="font-black uppercase text-sm">3. Ayakta Göğüs Sineği</h4>
+                        <div class="rep-badge text-sky-400 font-bold">10+10x</div>
+                    </div>
+                    <p class="text-slate-500 text-xs mb-4">Üst ve iç göğüs liflerini belirginleştirme.</p>
+                    <button onclick="startTimer(this, 60)" class="w-full bg-sky-600/20 py-3 rounded-xl text-[10px] font-bold border border-sky-500/20">60s Mola</button>
+                </div>
 
-<div class="panel">
-<div class="video">
-<iframe src="https://www.youtube.com/embed/eozdVDA78K0"></iframe>
-</div>
-<h3>Dumbbell Fly</h3>
-<p>4 SET – 12 / 12 / MAX / MAX</p>
-<button onclick="startTimer(this,60)">60s Mola</button>
-</div>
+                <div class="glass-panel p-5">
+                    <div class="image-container mb-4"><img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Dumbbell-pullover-1.png"></div>
+                    <div class="flex justify-between items-start mb-3">
+                        <h4 class="font-black uppercase text-sm">4. Pullover</h4>
+                        <div class="rep-badge text-sky-400 font-bold">10x</div>
+                    </div>
+                    <p class="text-slate-500 text-xs mb-4">Göğüs kafesini genişletme.</p>
+                    <button onclick="startTimer(this, 60)" class="w-full bg-sky-600/20 py-3 rounded-xl text-[10px] font-bold border border-sky-500/20">60s Mola</button>
+                </div>
 
-<div class="panel">
-<div class="video">
-<iframe src="https://www.youtube.com/embed/ul7hD2V4vK4"></iframe>
-</div>
-<h3>Standing Chest Fly</h3>
-<p>4 SET – 12 / 12 / MAX / MAX</p>
-<button onclick="startTimer(this,60)">60s Mola</button>
-</div>
+                <div class="glass-panel p-5 border-purple-500/10">
+                    <div class="image-container mb-4"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Dumbbell-bench-press-1.png"></div>
+                    <div class="flex justify-between items-start mb-3">
+                        <h4 class="font-black uppercase text-sm text-purple-400">5. DB Diamond Press</h4>
+                        <div class="rep-badge text-purple-400 font-bold">10x</div>
+                    </div>
+                    <p class="text-slate-500 text-xs mb-4">Göğüs ortası ve arka kol odaklı.</p>
+                    <button onclick="startTimer(this, 45)" class="w-full bg-purple-600/20 py-3 rounded-xl text-[10px] font-bold border border-purple-500/20">45s Mola</button>
+                </div>
 
-<div class="panel">
-<div class="video">
-<iframe src="https://www.youtube.com/embed/5YStMv6m2g8"></iframe>
-</div>
-<h3>Pullover</h3>
-<p>4 SET – 12 / 12 / MAX / MAX</p>
-<button onclick="startTimer(this,60)">60s Mola</button>
-</div>
+                <div class="glass-panel p-5 border-purple-500/10">
+                    <div class="image-container mb-4"><img src="https://upload.wikimedia.org/wikipedia/commons/6/62/Dumbbell-one-arm-triceps-extension-1.png"></div>
+                    <div class="flex justify-between items-start mb-3">
+                        <h4 class="font-black uppercase text-sm text-purple-400">6. Üç Başlı Kas Açma</h4>
+                        <div class="rep-badge text-purple-400 font-bold">10x</div>
+                    </div>
+                    <p class="text-slate-500 text-xs mb-4">Arka kolun hacmi.</p>
+                    <button onclick="startTimer(this, 45)" class="w-full bg-purple-600/20 py-3 rounded-xl text-[10px] font-bold border border-purple-500/20">45s Mola</button>
+                </div>
 
-<div class="panel">
-<div class="video">
-<iframe src="https://www.youtube.com/embed/_gsUck-7M74"></iframe>
-</div>
-<h3>Diamond Press</h3>
-<p>4 SET – 12 / 12 / MAX / MAX</p>
-<button onclick="startTimer(this,60)">60s Mola</button>
-</div>
+                <div class="glass-panel p-5 border-purple-500/10">
+                    <div class="image-container mb-4"><img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Dumbbell-triceps-kickback-1.png"></div>
+                    <div class="flex justify-between items-start mb-3">
+                        <h4 class="font-black uppercase text-sm text-purple-400">7. Dambıl Geri Tepme</h4>
+                        <div class="rep-badge text-purple-400 font-bold">10x</div>
+                    </div>
+                    <p class="text-slate-500 text-xs mb-4">Arka kolun detay çizgileri.</p>
+                    <button onclick="startTimer(this, 45)" class="w-full bg-purple-600/20 py-3 rounded-xl text-[10px] font-bold border border-purple-500/20">45s Mola</button>
+                </div>
 
-<div class="panel">
-<div class="video">
-<iframe src="https://www.youtube.com/embed/vB5OHsJ3EME"></iframe>
-</div>
-<h3>Triceps Extension</h3>
-<p>4 SET – 10 / 10 / MAX / MAX</p>
-<button onclick="startTimer(this,45)">45s Mola</button>
-</div>
+                <div class="glass-panel p-5 border-purple-500/10">
+                    <div class="image-container mb-4"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Triceps_Dips.png"></div>
+                    <div class="flex justify-between items-start mb-3">
+                        <h4 class="font-black uppercase text-sm text-purple-400">8. Bench Dips</h4>
+                        <div class="rep-badge text-purple-400 font-bold">MAX</div>
+                    </div>
+                    <p class="text-slate-500 text-xs mb-4">Vücut ağırlığıyla son bitiriş.</p>
+                    <button onclick="startTimer(this, 45)" class="w-full bg-purple-600/20 py-3 rounded-xl text-[10px] font-bold border border-purple-500/20">45s Mola</button>
+                </div>
+            </div>
+        </section>
 
-<div class="panel">
-<div class="video">
-<iframe src="https://www.youtube.com/embed/6SS6K3lAwWI"></iframe>
-</div>
-<h3>Kickback</h3>
-<p>4 SET – 10 / 10 / MAX / MAX</p>
-<button onclick="startTimer(this,45)">45s Mola</button>
-</div>
+        <section>
+            <h2 class="abana-font text-3xl text-white italic Day-Title border-l-4 border-emerald-500 pl-4 uppercase">2. GÜN: ÇEKİŞ (Sırt & Pazu & Omuz)</h2>
+            <p class="text-slate-400 text-sm mb-12 mt-2 leading-relaxed">Bu gün, dambılları kendine çektiğin hareketlerle sırtını genişletir, pazularını (biceps) doldurur ve omuzlarını yuvarlaklaştırır.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-panel p-5">
+                    <div class="image-container mb-4"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/One-arm_dumbbell_row_1.png"></div>
+                    <div class="flex justify-between items-start mb-3">
+                        <h4 class="font-black uppercase text-sm">1. Eğilerek Kürek Çekme</h4>
+                        <div class="rep-badge text-emerald-400 font-bold">10x</div>
+                    </div>
+                    <p class="text-slate-500 text-xs mb-4">Sırt kalınlığı ve duruş düzeltme.</p>
+                    <button onclick="startTimer(this, 60)" class="w-full bg-emerald-600/20 py-3 rounded-xl text-[10px] font-bold border border-emerald-500/20">60s Mola</button>
+                </div>
 
-<div class="panel">
-<div class="video">
-<iframe src="https://www.youtube.com/embed/0326dy_-CzM"></iframe>
-</div>
-<h3>Bench Dips</h3>
-<p>3 SET – MAX</p>
-<button onclick="startTimer(this,45)">45s Mola</button>
-</div>
+                <div class="glass-panel p-5">
+                    <div class="image-container mb-4"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Dumbbell-rear-lateral-raise-1.png"></div>
+                    <div class="flex justify-between items-start mb-3">
+                        <h4 class="font-black uppercase text-sm">2. Ters Sinek / Rear Delt</h4>
+                        <div class="rep-badge text-emerald-400 font-bold">10x</div>
+                    </div>
+                    <p class="text-slate-500 text-xs mb-4">Omuzun arka kısmını doldurma.</p>
+                    <button onclick="startTimer(this, 60)" class="w-full bg-emerald-600/20 py-3 rounded-xl text-[10px] font-bold border border-emerald-500/20">60s Mola</button>
+                </div>
 
-</div>
+                <div class="glass-panel p-5">
+                    <div class="image-container mb-4"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/One-arm_dumbbell_row_1.png"></div>
+                    <div class="flex justify-between items-start mb-3">
+                        <h4 class="font-black uppercase text-sm">3. Şınavlı Kürek Çekme</h4>
+                        <div class="rep-badge text-emerald-400 font-bold">4x</div>
+                    </div>
+                    <p class="text-slate-500 text-xs mb-4">Tüm üst vücut stabilitesi.</p>
+                    <button onclick="startTimer(this, 60)" class="w-full bg-emerald-600/20 py-3 rounded-xl text-[10px] font-bold border border-emerald-500/20">60s Mola</button>
+                </div>
 
-<!-- PULL DAY -->
+                <div class="glass-panel p-5 border-pink-500/10">
+                    <div class="image-container mb-4"><img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Dumbbell-curl-1.png"></div>
+                    <div class="flex justify-between items-start mb-3">
+                        <h4 class="font-black uppercase text-sm text-pink-400">4. Drag Curl</h4>
+                        <div class="rep-badge text-pink-400 font-bold">10x</div>
+                    </div>
+                    <p class="text-slate-500 text-xs mb-4">Pazunun dış hattını (peak) çıkarma.</p>
+                    <button onclick="startTimer(this, 45)" class="w-full bg-pink-600/20 py-3 rounded-xl text-[10px] font-bold border border-pink-500/20">45s Mola</button>
+                </div>
 
-<h2 class="text-2xl mt-10 mb-4">GÜN 2 – ÇEKİŞ</h2>
+                <div class="glass-panel p-5 border-pink-500/10">
+                    <div class="image-container mb-4"><img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Dumbbell-curl-1.png"></div>
+                    <div class="flex justify-between items-start mb-3">
+                        <h4 class="font-black uppercase text-sm text-pink-400">5. Concentration Curl</h4>
+                        <div class="rep-badge text-pink-400 font-bold">10+10x</div>
+                    </div>
+                    <p class="text-slate-500 text-xs mb-4">Pazu tepe noktası odaklı.</p>
+                    <button onclick="startTimer(this, 45)" class="w-full bg-pink-600/20 py-3 rounded-xl text-[10px] font-bold border border-pink-500/20">45s Mola</button>
+                </div>
 
-<div class="grid md:grid-cols-3 gap-6">
+                <div class="glass-panel p-5 border-pink-500/10">
+                    <div class="image-container mb-4"><img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Dumbbell-hammer-curl-1.png"></div>
+                    <div class="flex justify-between items-start mb-3">
+                        <h4 class="font-black uppercase text-sm text-pink-400">6. Çapraz Hammer Curl</h4>
+                        <div class="rep-badge text-pink-400 font-bold">14x</div>
+                    </div>
+                    <p class="text-slate-500 text-xs mb-4">Kolun yan tarafındaki o kalın görüntüyü sağlayan kas.</p>
+                    <button onclick="startTimer(this, 45)" class="w-full bg-pink-600/20 py-3 rounded-xl text-[10px] font-bold border border-pink-500/20">45s Mola</button>
+                </div>
 
-<div class="panel">
-<div class="video">
-<iframe src="https://www.youtube.com/embed/roCP6wCXPqo"></iframe>
-</div>
-<h3>Bent Over Row</h3>
-<p>4 SET – 12 / 12 / MAX / MAX</p>
-<button onclick="startTimer(this,60)">60s Mola</button>
-</div>
+                <div class="glass-panel p-5">
+                    <div class="image-container mb-4"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Dumbbell-front-raise-1.png"></div>
+                    <div class="flex justify-between items-start mb-3">
+                        <h4 class="font-black uppercase text-sm">7. Upright Row</h4>
+                        <div class="rep-badge text-emerald-400 font-bold">10x</div>
+                    </div>
+                    <p class="text-slate-500 text-xs mb-4">Omuz başları ve trapezler.</p>
+                    <button onclick="startTimer(this, 60)" class="w-full bg-emerald-600/20 py-3 rounded-xl text-[10px] font-bold border border-emerald-500/20">60s Mola</button>
+                </div>
 
-<div class="panel">
-<div class="video">
-<iframe src="https://www.youtube.com/embed/EA7u4Q_8HQ0"></iframe>
-</div>
-<h3>Rear Delt Fly</h3>
-<p>4 SET – 12 / 12 / MAX / MAX</p>
-<button onclick="startTimer(this,60)">60s Mola</button>
-</div>
+                <div class="glass-panel p-5 border-amber-500/10">
+                    <div class="image-container mb-4"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Dumbbell-shrug-1.png"></div>
+                    <div class="flex justify-between items-start mb-3">
+                        <h4 class="font-black uppercase text-sm text-amber-400">8. Omuz Silkme / Shrug</h4>
+                        <div class="rep-badge text-amber-400 font-bold">10x</div>
+                    </div>
+                    <p class="text-slate-500 text-xs mb-4">Üst trapez kasları.</p>
+                    <button onclick="startTimer(this, 45)" class="w-full bg-amber-600/20 py-3 rounded-xl text-[10px] font-bold border border-amber-500/20">45s Mola</button>
+                </div>
 
-<div class="panel">
-<div class="video">
-<iframe src="https://www.youtube.com/embed/wT7as58p2mI"></iframe>
-</div>
-<h3>Renegade Row</h3>
-<p>4 SET – 10 / 10 / MAX / MAX</p>
-<button onclick="startTimer(this,60)">60s Mola</button>
-</div>
+                <div class="glass-panel p-5 border-pink-500/10">
+                    <div class="image-container mb-4"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Dumbbell-alternate-biceps-curl-1.png"></div>
+                    <div class="flex justify-between items-start mb-3">
+                        <h4 class="font-black uppercase text-sm text-pink-400">9. Geniş Curl</h4>
+                        <div class="rep-badge text-pink-400 font-bold">10x</div>
+                    </div>
+                    <p class="text-slate-500 text-xs mb-4">Pazunun iç kısmını doldurma.</p>
+                    <button onclick="startTimer(this, 45)" class="w-full bg-pink-600/20 py-3 rounded-xl text-[10px] font-bold border border-pink-500/20">45s Mola</button>
+                </div>
+            </div>
+        </section>
 
-<div class="panel">
-<div class="video">
-<iframe src="https://www.youtube.com/embed/soxrZlIl35U"></iframe>
-</div>
-<h3>Drag Curl</h3>
-<p>4 SET – 10 / 10 / MAX / MAX</p>
-<button onclick="startTimer(this,45)">45s Mola</button>
-</div>
+    </main>
 
-<div class="panel">
-<div class="video">
-<iframe src="https://www.youtube.com/embed/oLyP6sORFOc"></iframe>
-</div>
-<h3>Concentration Curl</h3>
-<p>4 SET – 10 / 10 / MAX / MAX</p>
-<button onclick="startTimer(this,45)">45s Mola</button>
-</div>
-
-<div class="panel">
-<div class="video">
-<iframe src="https://www.youtube.com/embed/zC3nLlEvin4"></iframe>
-</div>
-<h3>Hammer Curl</h3>
-<p>4 SET – 10 / 10 / MAX / MAX</p>
-<button onclick="startTimer(this,45)">45s Mola</button>
-</div>
-
-<div class="panel">
-<div class="video">
-<iframe src="https://www.youtube.com/embed/amCU-ziHITM"></iframe>
-</div>
-<h3>Upright Row</h3>
-<p>4 SET – 12 / 12 / MAX / MAX</p>
-<button onclick="startTimer(this,45)">45s Mola</button>
-</div>
-
-<div class="panel">
-<div class="video">
-<iframe src="https://www.youtube.com/embed/jPjhQp_9j_P4"></iframe>
-</div>
-<h3>Shrug</h3>
-<p>4 SET – 12 / 12 / MAX / MAX</p>
-<button onclick="startTimer(this,45)">45s Mola</button>
-</div>
-
-<div class="panel">
-<div class="video">
-<iframe src="https://www.youtube.com/embed/ykJmrZ5v0Oo"></iframe>
-</div>
-<h3>Wide Curl</h3>
-<p>4 SET – 10 / 10 / MAX / MAX</p>
-<button onclick="startTimer(this,45)">45s Mola</button>
-</div>
-
-</div>
-
-<script>
-
-function startTimer(button, seconds){
-
-if(button.dataset.running==="true") return;
-
-let time=seconds;
-button.dataset.running="true";
-
-const interval=setInterval(()=>{
-
-time--;
-button.innerText="KALAN "+time+"s";
-
-if(time<=0){
-
-clearInterval(interval);
-
-button.innerText="Dinlenme Bitti";
-button.dataset.running="false";
-
-}
-
-},1000)
-
-}
-
-</script>
-
+    <script>
+        function startTimer(button, seconds) {
+            if (button.dataset.running === "true") return;
+            const originalText = button.innerHTML;
+            let timeLeft = seconds;
+            button.dataset.running = "true";
+            button.className = "w-full bg-slate-700 py-3 rounded-xl text-[10px] font-bold border border-slate-600 text-amber-400";
+            const interval = setInterval(() => {
+                timeLeft--;
+                button.innerHTML = `KALAN: ${timeLeft}sn`;
+                if (timeLeft <= 0) {
+                    clearInterval(interval);
+                    button.dataset.running = "false";
+                    button.innerHTML = originalText;
+                    // Reset to the original color scheme based on the parent panel
+                    if (button.closest('.border-sky-500/10')) button.className = "w-full bg-sky-600/20 py-3 rounded-xl text-[10px] font-bold border border-sky-500/20";
+                    else if (button.closest('.border-emerald-500/10')) button.className = "w-full bg-emerald-600/20 py-3 rounded-xl text-[10px] font-bold border border-emerald-500/20";
+                    else if (button.closest('.border-pink-500/10')) button.className = "w-full bg-pink-600/20 py-3 rounded-xl text-[10px] font-bold border border-pink-500/20";
+                    else if (button.closest('.border-purple-500/10')) button.className = "w-full bg-purple-600/20 py-3 rounded-xl text-[10px] font-bold border border-purple-500/20";
+                    else button.className = button.className.replace("bg-slate-700", button.closest('section').className.includes('İTİŞ') ? 'bg-sky-600/20' : 'bg-emerald-600/20').replace('text-amber-400', '');
+                }
+            }, 1000);
+        }
+    </script>
 </body>
 </html>
